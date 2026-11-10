@@ -1,0 +1,11 @@
+{
+  "name": "onetrip-pilot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OneTrip — independent South African service-preparation pilot",
+  "scripts": {
+    "test": "node --test",
+    "serve": "python3 -m http.server 8000 --directory dist"
+  }
+}
