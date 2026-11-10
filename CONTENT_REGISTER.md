@@ -1,8 +1,8 @@
-# OneTrip private preview content register — 10 November 2026
+# OneTrip pilot content register — 10 November 2026
 
-**Status:** editorially prepared for private review, NOT cleared for public launch.
+**Deployment:** Public pilot at https://onetrip-sa.netlify.app (10 November 2026). **Editorial status:** Human source and legal review are still outstanding; public availability does not mean the guides are fully verified or ready for production reliance.
 
-The OneTrip team must confirm each guide with authoritative sources before any public release. Last-reviewed labels in the pilot are not an endorsement from the institutions below.
+The OneTrip team must confirm each guide with authoritative sources before production-ready sign-off. Last-reviewed labels in the pilot are not an endorsement from the institutions below.
 
 | Pilot guide | Scope | Primary official source(s) | Launch review |
 | --- | --- | --- | --- |
@@ -24,7 +24,7 @@ The OneTrip team must confirm each guide with authoritative sources before any p
 5. Do not claim to book appointments, guarantee successful visits, act for institutions or handle their payments.
 6. Do not collect or transmit ID numbers, financial credentials, health information or scanned documents.
 
-## Outstanding before public release
+## Outstanding before production-ready sign-off
 
 - Verify all eight guides' detailed wording, exceptions and source links on the final publication date.
 - Establish the actual business operator, contact channel, correction-reporting integration and reviewed privacy/terms content.
@@ -36,9 +36,9 @@ The OneTrip team must confirm each guide with authoritative sources before any p
 
 Edit `dist/assets/js/guides.js`, run `npm test`, verify linked sources and record the reviewer/date in this register before a public release.
 
-## Private preview expansion notes — 10 November 2026
+## Pilot expansion notes — 10 November 2026
 
 - Expanded from five institution-specific guides to eight guides across the same three categories.
 - Multi-institution bank and university selection uses conditional checklist items; official provider links remain separate and explicit.
 - NBT, NSFAS and vehicle-disc guidance is preparation only; no payment, registration, booking or submission integration exists.
-- All guides require independent editorial sign-off and a final official-source check before a public launch.
+- All guides still require independent editorial sign-off and a final official-source check. Public hosting does not replace these checks.
