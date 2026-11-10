@@ -1,56 +1,90 @@
-# OneTrip — Bright Compass pilot
+# OneTrip — Bright Compass
 
-An accessible, framework-free website for preparing South Africans for everyday appointments and administrative tasks.
+**[Visit the live OneTrip website](https://onetrip-sa.netlify.app)**
 
-## What works in this private build
+OneTrip is a mobile-friendly South African website that helps people prepare for everyday appointments, applications and administrative tasks. It turns general guidance into service-specific preparation checklists and helps visitors identify things to confirm **before travelling**.
 
-- Homepage, Explore Services, service guides, Prepare My Visit wizard and personalised checklists.
-- Five structured pilot journeys (Smart ID, adult passport, Gauteng driving-licence-card renewal, Capitec personal-account onboarding and UNISA undergraduate application preparation).
-- Conditional requirements and a service-specific Trip Check result.
-- Optional on-device saving, checklist progress tracking, print/Save as PDF, and safe sharing of generic service links.
-- About, How It Works, FAQs, Contact preview, Privacy and Terms preview, and 404 page.
-- Responsive styles, keyboard-operable controls and print-specific styles.
+> **Public pilot / informational demo.** OneTrip is independently developed and is not affiliated with Home Affairs, banks, universities, NBT, NSFAS or NaTIS. Requirements, fees, service availability and deadlines can change. Always confirm details with the relevant official provider. The content register records outstanding human source reviews before the service can be considered production-ready.
+
+## What you can do
+
+- Browse services across **Government & civic**, **Banking & financial** and **Education**.
+- Answer a few questions to generate a conditional preparation checklist.
+- See a **Trip Check** explaining what to confirm before a visit.
+- Save checklist progress on your own device, print or save as PDF, or share a generic service link.
+- Find links to relevant official information sources.
+
+### Eight pilot guides
+
+| Category | Guide | Supported choices |
+| --- | --- | --- |
+| Government & civic | Smart ID card | First issue, conversion and replacement preparation |
+| Government & civic | Adult passport | Adult applications and lost-passport considerations |
+| Government & civic | Driving licence card renewal | Gauteng pilot |
+| Government & civic | Vehicle licence disc renewal | Online and in-person preparation |
+| Banking & financial | Open a personal bank account | Capitec, FNB, Absa, Nedbank and Standard Bank |
+| Education | Apply to university | UNISA, UJ, UP, Wits and TUT |
+| Education | Register for the NBT | National Benchmark Test booking preparation |
+| Education | Prepare an NSFAS application | Application preparation and official portal guidance |
+
+**OneTrip does not submit applications, book appointments, open bank accounts, accept payments or guarantee eligibility.**
+
+## Live deployment
+
+- **Website:** https://onetrip-sa.netlify.app
+- **GitHub repository:** https://github.com/Khumo-Hub/OneTrip
+- **Branch:** `main`
+- **Host:** Netlify
+- **Base directory:** repository root
+- **Build command:** none
+- **Publish directory:** `dist`
+
+The Netlify project is linked to GitHub for deployments from the `main` branch. The production website is publicly accessible; its source repository has separate visibility settings.
+
+## Technology
+
+HTML5, CSS3 and vanilla JavaScript (ES modules), with no frontend framework or runtime dependencies.
 
 ## Run locally
 
-No install or framework build is needed. Use Python's HTTP server or any static file server:
-
 ```bash
-cd onetrip
 npm run serve
 ```
 
-Open `http://localhost:8000`. For service-specific questions, click **Prepare my visit**.
+Open http://localhost:8000. The server serves files from `dist/`. Python 3 is required for this command.
 
-## Test
+## Run tests
 
 ```bash
 npm test
 ```
 
-Tests are powered by Node's built-in test runner; no dependencies are installed.
+The suite uses Node.js's built-in test runner and checks guide branching, checklist logic, page structure and asset references.
 
-## Hosting
-
-Upload the contents of `dist/` to the web root of a conventional static host (e.g. Hostinger `public_html`) or configure Netlify's publish directory to `dist`. Keep the relative folder structure intact. This is suitable for testing as an unpublished project; public launch is **not yet approved**.
-
-## Content and privacy safeguards
-
-See `CONTENT_REGISTER.md` for authoritative sources and outstanding review gates. Client-side choices contain no identity or financial numbers. Session state only contains the selected guide and general answer labels. A saved checklist is stored on the device only when the visitor requests it and can be cleared.
-
-The contact page currently helps users **copy** feedback but does **not** send it. It is explicitly labelled as a preview. A real contact integration, final legal copy and source-review sign-off are required before public launch.
-
-## Project layout
+## Project structure
 
 ```text
-onetrip/
-  dist/
-    index.html, prepare.html, checklist.html, services.html, ...
-    assets/css/styles.css
-    assets/js/guides.js  # Content and branching rules
-    assets/js/logic.js   # Tested pure checklist functions
-    assets/js/main.js    # UI and interaction controllers
-  tests/checklists.test.js
-  CONTENT_REGISTER.md
-  README.md
+dist/
+  index.html, services.html, prepare.html, checklist.html, ...
+  assets/css/styles.css
+  assets/js/guides.js
+  assets/js/logic.js
+  assets/js/main.js
+  assets/images/
+tests/
+CONTENT_REGISTER.md
+README.md
+package.json
 ```
+
+## Privacy, content and limitations
+
+- The site does not request ID numbers, bank credentials, financial details or uploaded identity documents.
+- Optional saved checklists are stored locally on the visitor's device.
+- The contact page is a **preview**: it lets a visitor copy feedback, but does not send a message to OneTrip.
+- Privacy and terms pages still require business/operator details and legal review.
+- The eight guides require a named human review against official sources. See [CONTENT_REGISTER.md](CONTENT_REGISTER.md) for sources, review cadence and outstanding release work.
+- Responsive, accessibility and real-device QA should be completed before treating this pilot as a finished commercial service.
+
+---
+Built for everyday South Africans: **One less trip. A lot less stress.**
